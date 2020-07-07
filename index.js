@@ -25,12 +25,12 @@ $(function() {
     </div>
     </li>`) 
     });
-        //on click for shopping item toggle for strike through, create function event that changes closest list item to button to .toggle class
+        //on click for shopping item toggle for strike through, create function event that changes  list item to button to .toggle class
     $('.shopping-list').on('click','.shopping-item-toggle', event => {
       const checkItem = $(event.currentTarget).closest("li");
       checkItem.find(".shopping-item").toggleClass('shopping-item__checked');
     });
-        //on click for shopping item delete, create function event that changes iten closest to list item to delete button
+        //on click for shopping item delete, create function event that removes list item
     $('.shopping-list').on('click','.shopping-item-delete', event => {
       const deleteItem = $(event.currentTarget).closest("li");
       deleteItem.remove();
